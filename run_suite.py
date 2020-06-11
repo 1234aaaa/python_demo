@@ -7,6 +7,7 @@ from BeautifulReport import BeautifulReport
 import app
 
 # report_name = "tpshop_report{}.html".format(time.strftime("%Y%m%d%H%M%S"))
+print("*"*50)
 report_name = "tpshop_report.html"
 suite = unittest.TestLoader().discover(app.BASE_DIR + "/script", pattern="test*.py")
 BeautifulReport(suite).report(filename=report_name, description="TpShop报告", log_path=app.BASE_DIR + "/report")
